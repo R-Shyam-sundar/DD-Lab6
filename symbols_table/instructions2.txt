@@ -1,0 +1,6 @@
+ 1. cat /proc/kallsyms |grep module1 (To view symbols of dynamically loaded modules as well as builtin modules)
+ 2. To view symbols of builtin modules-  cat /boot/System.map<version> |grep <builtin modulename>
+ 3. create symbol.c
+ 4. create Makefile
+ 5. Insert module
+ 6. cat /proc/kallsysms |grep print -jiffies
