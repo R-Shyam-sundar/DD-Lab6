@@ -1,0 +1,15 @@
+1. Create module1.c and module2.c
+2. Create Makefile
+3. Run sudo make
+Note: As modprobe reads only modules present in /lib/modules/$(uname -r), create symbolic link of your modules to /lib/modules/$(uname -r). Note, we need to pass full path of the module
+4. sudo ln -s <path>/module1.ko  /lib/modules/5.4.0-139-generic 
+Note :(system specific: /lib/modules/5.4.0-139-generic)
+5. sudo ln -s <path>/module2.ko  /lib/modules/5.4.0-139-generic 
+6. sudo depmod -a (Update modules.dep and map files)
+7. sudo modprobe -a module1 module2
+8. dmesg
+9. sudo modprobe -r module1 module2
+10. dmesg
+
+
+
